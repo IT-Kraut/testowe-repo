@@ -1,0 +1,4 @@
+Distributor ID:	Parrot
+Description:	Parrot OS 5.3 (Electro Ara)
+Release:	5.3
+Codename:	ara
