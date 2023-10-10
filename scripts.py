@@ -6,10 +6,20 @@ print(f"The sum of {num1} and {num2} is {result}")
 # Lechosław says this is for retards and you'd better be voting on Conferedates next week
 # LESZKE SMIESZKIE MOWI TYLKO PIS
 
-def glupota(cursor, connection): -> str
+def glupota(cursor, connection, text): -> str
     """Function to execute SQL commands"""
-    cursor.exec("DROP users;")
-    text = 'pipa'
+    dupa = cursor.exec("DROP users;")
+    supertext = ''.join(text)
+    return dupa
 
-    return text
+def test_success_glupota():
+    assert glupota(cursor, connection) == 0
+
+def test_failure_glupota():
+    try:
+        cursor = {'test', 'kek'}
+    except SQLFailure as error:
+        pass
+    assert error == 'Failure with connection'
+
 
